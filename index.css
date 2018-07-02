@@ -1,0 +1,17 @@
+.slots {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	display: flex;
+	justify-content:space-evenly;
+	text-align: center;
+	font-size: 25vh;
+}
+.slot {
+	margin: 2.5vw;
+	border-style:solid;
+	border-width: 1vh;
+	height: 30vh;
+	width: 30vh;
+}

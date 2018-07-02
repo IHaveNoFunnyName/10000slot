@@ -1,0 +1,82 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="./node_modules/jquery-slotmachine/dist/slotmachine.min.js"></script>
+</head
+<body>
+	<div class="slots">
+		<div class="slot" id="number1">
+			<div>0</div>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+		</div>
+		<div class="slot" id="number2">
+			<div>0</div>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+		</div>
+		<div class="slot" id="number3">
+			<div>0</div>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+		</div>
+		<div class="slot" id="number4">
+			<div>0</div>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+		</div>
+	</div>
+<script>
+	const m1 = document.querySelector('#number1');
+	const m2 = document.querySelector('#number2');
+	const m3 = document.querySelector('#number3');
+	const m4 = document.querySelector('#number4');
+	const machine1 = new SlotMachine(m1, {
+	});
+	const machine2 = new SlotMachine(m2, {
+	});
+	const machine3 = new SlotMachine(m3, {
+	});
+	const machine4 = new SlotMachine(m4, {
+	});
+	document.body.addEventListener('click', () => {
+	machine1.delay = Math.floor(Math.random() * 800 + 200)
+	machine2.delay = Math.floor(Math.random() * 800 + 200)
+	machine3.delay = Math.floor(Math.random() * 800 + 200)
+	machine4.delay = Math.floor(Math.random() * 800 + 200)
+	machine1.shuffle();
+	machine2.shuffle();
+	machine3.shuffle();
+	machine4.shuffle();
+	});
+</script>
+</body>
+</html>
